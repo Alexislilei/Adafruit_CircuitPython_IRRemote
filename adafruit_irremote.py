@@ -101,7 +101,7 @@ def decode_bits(pulses):
 
     # special exception for NEC repeat code!
     if (
-        (len(pulses) == 3)
+        (len(pulses) == 4)      #changed from 3 to 4. when NEC Repeat code is coming, the lenth of  pulses is 4, the 4th pluse is 65535
         and (8000 <= pulses[0] <= 10000)
         and (2000 <= pulses[1] <= 3000)
         and (450 <= pulses[2] <= 700)
